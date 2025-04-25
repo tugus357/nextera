@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXTERA - IX J Angkatan 2022</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Website resmi kelas IX J Angkatan 2022 - Berisi informasi tentang profil kelas, galeri, guru, dan kenangan bersama." />
+  <meta name="keywords" content="IX J, Angkatan 2022, Sekolah, Kelas, Galeri, Guru, Kenangan" />
+  <meta name="author" content="NEXTERA" />
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="NEXTERA - IX J Angkatan 2022" />
+  <meta property="og:description" content="Website resmi kelas IX J Angkatan 2022 - Berisi informasi tentang profil kelas, galeri, guru, dan kenangan bersama." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nextera-ixj.com" />
+  <meta property="og:image" content="https://nextera-ixj.com/images/og-image.jpg" />
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Montserrat:wght@400;500;600;700&display=swap" as="style" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" />
+  
+  <!-- Existing stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+  
+  <style>
+    :root {
+      --primary: #a855f7;
+      --primary-dark: #9333ea;
+      --secondary: #c084fc;
+      --dark: #121212;
+      --dark-light: #2e2e2e;
+      --light: #ffffff;
+      --accent: #f472b6;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+    }
+    
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(135deg, rgba(10,10,10,1) 0%, rgba(30,30,30,1) 100%);
+      background-size: 200% 200%;
+      animation: gradient 20s ease infinite;
+    }
+    
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    header {
+      padding: 2rem 0;
+      text-align: center;
+      position: relative;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    h1 {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+      text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+      transition: all 0.3s ease;
+    }
+    
+    h1:hover {
+      text-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
+    }
+    
+    .tagline {
+      font-size: 1.2rem;
+      color: var(--secondary);
+      margin-bottom: 2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    
+    .tab-btn {
+      padding: 0.75rem 1.5rem;
+      background-color: rgba(31, 31, 31, 0.7);
+      border: 2px solid var(--primary-dark);
+      border-radius: 30px;
+      color: var(--light);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .tab-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.5s;
+      z-index: -1;
+    }
+    
+    .tab-btn:hover::before {
+      left: 100%;
+    }
+    
+    .tab-btn.active, .tab-btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 10px rgba(147, 51, 234, 0.3);
+    }
+    
+    .tab-btn.active {
+      position: relative;
+    }
+    
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background-color: var(--primary);
+      border-radius: 50%;
+    }
+    
+    .main-content {
+      flex: 1;
+      padding: 2rem 0;
+    }
+    
+    .tab-content {
+      display: none;
+      margin-top: 1.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+    .tab-content.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .section-title {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 2.5rem;
+      color: var(--secondary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+    }
+    
+    .description {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .card {
+      background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 250px;
+      position: relative;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(147, 51, 234, 0.2);
+    }
+    
+    .card-content {
+      padding: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      z-index: 2;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    }
+    
+    .card-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      opacity: 0.6;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .card:hover .card-bg {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+    
+    .card-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--light);
+    }
+    
+    .teacher-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .teacher-card {
+      background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    
+    .teacher-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(147, 51, 234, 0.3);
+    }
+    
+    .teacher-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      overflow: hidden;
+      border: 4px solid var(--primary-dark);
+      box-shadow: 0 5px 15px rgba(147, 51, 234, 0.5);
+    }
+    
+    .teacher-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--light);
+    }
+    
+    .teacher-subject {
+      font-size: 1rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+    
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem 0;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, var(--primary), transparent);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      width: 50%;
+      padding: 0 2rem;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+    
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-color: var(--primary);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--primary);
+    }
+    
+    .timeline-item:nth-child(odd)::before {
+      right: -12px;
+    }
+    
+    .timeline-item:nth-child(even)::before {
+      left: -12px;
+    }
+    
+    .timeline-date {
+      font-size: 0.9rem;
+      color: var(--secondary);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .timeline-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--light);
+    }
+    
+    .timeline-content {
+      background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .memory-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .memory-card {
+      background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .memory-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(147, 51, 234, 0.3);
+    }
+    
+    .memory-image {
+      height: 200px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .memory-content {
+      padding: 1.5rem;
+    }
+    
+    .memory-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--light);
+    }
+    
+    .memory-date {
+      font-size: 0.9rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+    
+    .memory-text {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    
+    footer {
+      background-color: rgba(18, 18, 18, 0.9);
+      padding: 2rem 0;
+      text-align: center;
+      margin-top: 3rem;
+      border-top: 1px solid rgba(147, 51, 234, 0.3);
+    }
+    
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--dark-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--light);
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .social-icon:hover {
+      background-color: var(--primary);
+      transform: translateY(-5px);
+    }
+    
+    .footer-text {
+      font-size: 0.9rem;
+      color: #888;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .tagline {
+        font-size: 1rem;
+      }
+      
+      .container {
+        padding: 0 1rem;
+      }
+      
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      
+      .teacher-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .memory-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+      
+      .counter-number {
+        font-size: 2rem;
+      }
+      
+      .counter-label {
+        font-size: 1rem;
+      }
+      
+      .timeline::before {
+        left: 20px;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        left: 0;
+        padding-left: 50px;
+      }
+      
+      .timeline-item::before {
+        left: 10px;
+      }
+      
+      .tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .description {
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .counter-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .social-icons {
+        gap: 1rem;
+      }
+      
+      .social-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+      }
+    }
+    
+    /* Animations */
+    .animate__animated {
+      animation-duration: 1s;
+    }
+    
+    .animate__delay-1 {
+      animation-delay: 0.2s;
+    }
+    
+    .animate__delay-2 {
+      animation-delay: 0.4s;
+    }
+    
+    .animate__delay-3 {
+      animation-delay: 0.6s;
+    }
+    
+    .animate__delay-4 {
+      animation-delay: 0.8s;
+    }
+    
+    /* Scroll to Top Button */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--light);
+      font-size: 1.5rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    }
+    
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .scroll-top:hover {
+      transform: translateY(-5px);
+      background: var(--primary-dark);
+    }
+    
+    /* Loading Animation */
+    .loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--dark);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+    
+    .loader {
+      width: 80px;
+      height: 80px;
+      border: 5px solid var(--primary);
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Enhanced Card Hover Effects */
+    .card {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, var(--primary), var(--accent));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+    
+    .card:hover::before {
+      opacity: 0.1;
+    }
+    
+    .card-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Particle Background */
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    
+    /* Enhanced Button Hover */
+    .tab-btn {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s ease, height 0.6s ease;
+    }
+    
+    .tab-btn:hover::after {
+      width: 300px;
+      height: 300px;
+    }
+    
+    /* Enhanced Section Title */
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    
+    .section-title:hover::before {
+      transform: scaleX(1);
+    }
+    
+    /* Smooth Scroll Behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Parallax Effect */
+    .parallax-section {
+      position: relative;
+      overflow: hidden;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    /* Animated Counter */
+    .counter-section {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, var(--dark-light), var(--dark));
+    }
+    
+    .counter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+    
+    .counter-item {
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease;
+    }
+    
+    .counter-item:hover {
+      transform: translateY(-10px);
+    }
+    
+    .counter-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .counter-label {
+      font-size: 1.2rem;
+      color: var(--light);
+    }
+    
+    /* Floating Elements */
+    .floating {
+      animation: floating 4s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    /* Glowing Effect */
+    .glow {
+      position: relative;
+    }
+    
+    .glow::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, var(--primary), var(--accent), var(--primary));
+      z-index: -1;
+      border-radius: inherit;
+      animation: glowing 3s linear infinite;
+      opacity: 0.3;
+    }
+    
+    @keyframes glowing {
+      0% { opacity: 0.2; }
+      50% { opacity: 0.3; }
+      100% { opacity: 0.2; }
+    }
+    
+    /* Enhanced Card Hover */
+    .card {
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+    
+    .card:hover {
+      transform: rotateY(5deg) rotateX(5deg);
+    }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: var(--dark);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-dark);
+    }
+    
+    /* Interactive Counter Styles */
+    .counter-item {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .counter-item:hover {
+      transform: scale(1.05);
+    }
+    
+    .counter-number {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .counter-number::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--primary);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .counter-item:hover .counter-number::after {
+      transform: scaleX(1);
+    }
+    
+    /* Mobile Menu Styles */
+    .mobile-menu-btn {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: var(--primary);
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      color: var(--light);
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background: var(--dark);
+      z-index: 999;
+      transition: right 0.3s ease;
+      padding: 2rem;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .mobile-menu.active {
+      right: 0;
+    }
+    
+    .mobile-menu .tab-btn {
+      display: block;
+      width: 100%;
+      margin: 1rem 0;
+      text-align: left;
+    }
+    
+    /* Contact Form Styles */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--light);
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--light);
+      transition: all 0.3s ease;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 10px rgba(244, 114, 182, 0.3);
+    }
+    
+    .submit-btn {
+      background: var(--primary);
+      color: var(--light);
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .submit-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    /* Photo Gallery Styles */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* Skip to Content Link */
+    .skip-to-content {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      background: var(--primary);
+      color: var(--light);
+      padding: 1rem;
+      z-index: 1001;
+      transition: top 0.3s ease;
+    }
+    
+    .skip-to-content:focus {
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="skip-to-content">Skip to Content</a>
+  
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn" aria-label="Toggle Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <button class="tab-btn active" data-tab="profil">
+      <i class="fas fa-users"></i> Profil Kelas
+    </button>
+    <button class="tab-btn" data-tab="galeri">
+      <i class="fas fa-images"></i> Galeri
+    </button>
+    <button class="tab-btn" data-tab="guru">
+      <i class="fas fa-chalkboard-teacher"></i> Guru
+    </button>
+    <button class="tab-btn" data-tab="kenangan">
+      <i class="fas fa-book-open"></i> Kenangan
+    </button>
+    <button class="tab-btn" data-tab="kontak">
+      <i class="fas fa-envelope"></i> Kontak
+    </button>
+  </div>
+  
+  <!-- Loading Animation -->
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+  
+  <!-- Scroll to Top Button -->
+  <div class="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+  
+  <div class="page-wrapper">
+    <header>
+      <div class="container">
+        <h1 class="animate__animated animate__fadeIn">NEXTERA - IX J</h1>
+        <p class="tagline animate__animated animate__fadeIn animate__delay-1">Angkatan 2022 - Menggapai Impian Bersama</p>
+      </div>
+    </header>
+    
+    <div class="container">
+      <nav class="animate__animated animate__fadeInUp animate__delay-2">
+        <button class="tab-btn active" data-tab="profil">
+          <i class="fas fa-users"></i> Profil Kelas
+        </button>
+        <button class="tab-btn" data-tab="galeri">
+          <i class="fas fa-images"></i> Galeri
+        </button>
+        <button class="tab-btn" data-tab="guru">
+          <i class="fas fa-chalkboard-teacher"></i> Guru
+        </button>
+        <button class="tab-btn" data-tab="kenangan">
+          <i class="fas fa-book-open"></i> Kenangan
+        </button>
+      </nav>
+      
+      <main class="main-content">
+        <div id="profil" class="tab-content active">
+          <h2 class="section-title">Tentang IX J</h2>
+          <p class="description">
+            Kami adalah keluarga kecil yang dipenuhi dengan cerita, tawa, dan kenangan indah. 
+            Angkatan 2022, kelas IX J menorehkan jejak dengan semangat dan solidaritas yang luar biasa, 
+            menciptakan ikatan persaudaraan yang tak akan pernah pudar oleh waktu.
+          </p>
+          
+          <div class="grid">
+            <div class="card">
+              <div class="card-bg" style="background-image: url('/api/placeholder/400/320')"></div>
+              <div class="card-content">
+                <h3 class="card-title">Visi Kelas</h3>
+                <p>Menjadi kelas yang berprestasi, berkarakter, dan memiliki kepedulian tinggi terhadap sesama.</p>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-bg" style="background-image: url('/api/placeholder/400/320')"></div>
+              <div class="card-content">
+                <h3 class="card-title">Misi Kelas</h3>
+                <p>Menciptakan lingkungan belajar yang kondusif dan membangun kerjasama yang solid antar siswa.</p>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-bg" style="background-image: url('/api/placeholder/400/320')"></div>
+              <div class="card-content">
+                <h3 class="card-title">Prestasi</h3>
+                <p>Juara 1 lomba kebersihan kelas, Finalis olimpiade matematika tingkat kota, dan berbagai prestasi lainnya.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">Juli 2022</div>
+              <div class="timeline-content">
+                <h3 class="timeline-title">Awal Perjalanan</h3>
+                <p>Pertama kali kami bertemu dan mulai membentuk keluarga IX J yang solid.</p>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-date">Desember 2022</div>
+              <div class="timeline-content">
+                <h3 class="timeline-title">Festival Akhir Tahun</h3>
+                <p>Merayakan kebersamaan dengan pentas seni dan berbagai pertunjukan yang mengesankan.</p>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-date">Juni 2023</div>
+              <div class="timeline-content">
+                <h3 class="timeline-title">Karyawisata</h3>
+                <p>Menjelajah keindahan alam dan budaya bersama, memperkuat ikatan persaudaraan.</p>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-date">April 2024</div>
+              <div class="timeline-content">
+                <h3 class="timeline-title">Persiapan Kelulusan</h3>
+                <p>Bersama-sama berjuang menghadapi ujian akhir dengan semangat saling mendukung.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="galeri" class="tab-content">
+          <h2 class="section-title">Galeri Kelas</h2>
+          <p class="description">
+            Kumpulan momen berharga yang telah kami lalui bersama, 
+            diabadikan dalam bentuk gambar yang menyimpan sejuta kenangan.
+          </p>
+          
+          <div class="grid">
+            <div class="card">
+              <div class="card-bg" style="background-image: url('/api/placeholder/400/320')"></div>
+              <div class="card-content">
+                <h3 class="card-title">Hari Pertama Sekolah</h3>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-bg" style="background-image: url('/api/placeholder/400/320')"></div>
+              <div class="card-content">
+                <h3 class="card-title">Lomba Class Meeting</h3>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-bg" style="background-image: url('/api/placeholder/400/320')"></div>
+              <div class="card-content">
+                <h3 class="card-title">Studi Tour ke Bandung</h3>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-bg" style="background-image: url('/api/placeholder/400/320')"></div>
+              <div class="card-content">
+                <h3 class="card-title">Ulang Tahun Kelas</h3>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-bg" style="background-image: url('/api/placeholder/400/320')"></div>
+              <div class="card-content">
+                <h3 class="card-title">Festival Seni Sekolah</h3>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-bg" style="background-image: url('/api/placeholder/400/320')"></div>
+              <div class="card-content">
+                <h3 class="card-title">Kegiatan Sosial Bersama</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="guru" class="tab-content">
+          <h2 class="section-title">Wali Kelas & Guru</h2>
+          <p class="description">
+            Mereka bukan sekadar pengajar, tetapi juga pembimbing dan inspirator 
+            yang telah mendedikasikan waktu dan tenaga untuk mendidik kami menjadi generasi terbaik.
+          </p>
+          
+          <div class="teacher-grid">
+            <div class="teacher-card">
+              <div class="teacher-avatar">
+                <img src="/api/placeholder/120/120" alt="Guru Wali" />
+              </div>
+              <h3 class="teacher-name">Bu Mila</h3>
+              <p class="teacher-subject">Guru Wali Utama</p>
+              <p>"Jangan pernah takut untuk bermimpi besar dan berusaha mewujudkannya."</p>
+            </div>
+            
+            <div class="teacher-card">
+              <div class="teacher-avatar">
+                <img src="/api/placeholder/120/120" alt="Guru Wali" />
+              </div>
+              <h3 class="teacher-name">Bu Lina</h3>
+              <p class="teacher-subject">Guru Wali Kedua</p>
+              <p>"Pendidikan adalah kunci untuk membuka pintu masa depan."</p>
+            </div>
+            
+            <div class="teacher-card">
+              <div class="teacher-avatar">
+                <img src="/api/placeholder/120/120" alt="Guru Wali" />
+              </div>
+              <h3 class="teacher-name">Bu Mila</h3>
+              <p class="teacher-subject">Guru Wali Ketiga</p>
+              <p>"Setiap anak memiliki potensi unik yang perlu dikembangkan."</p>
+            </div>
+          </div>
+        </div>
+        
+        <div id="kenangan" class="tab-content">
+          <h2 class="section-title">Kenangan Tak Terlupakan</h2>
+          <p class="description">
+            Perjalanan tiga tahun penuh cerita yang akan selalu terukir dalam hati kami.
+            Momen-momen berharga yang menjadi pengingat akan indahnya masa sekolah.
+          </p>
+          
+          <div class="memory-grid">
+            <div class="memory-card">
+              <div class="memory-image">
+                <img src="/api/placeholder/400/320" alt="Kemah Bersama" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div class="memory-content">
+                <h3 class="memory-title">Kemah Jomokerto</h3>
+                <p class="memory-date">September 2022</p>
+                <p class="memory-text">Pengalaman seru kemah bersama di Jomokerto, mengajarkan kemandirian dan kerjasama tim. Malam yang penuh bintang dan api unggun yang menghangatkan menjadi kenangan tak terlupakan.</p>
+              </div>
+            </div>
+            
+            <div class="memory-card">
+              <div class="memory-image">
+                <img src="/api/placeholder/400/320" alt="Lomba 17 Agustus" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div class="memory-content">
+                <h3 class="memory-title">Lomba 17 Agustus</h3>
+                <p class="memory-date">Agustus 2023</p>
+                <p class="memory-text">Semangat kemerdekaan yang membara dalam berbagai kompetisi. Meski tidak semua memenangkan lomba, tapi kebersamaan dan tawa yang tercipta adalah hadiah terbesar.</p>
+              </div>
+            </div>
+            
+            <div class="memory-card">
+              <div class="memory-image">
+                <img src="/api/placeholder/400/320" alt="Pentas Seni" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div class="memory-content">
+                <h3 class="memory-title">Pentas Seni Akhir Tahun</h3>
+                <p class="memory-date">Desember 2023</p>
+                <p class="memory-text">Panggung yang bersinar, penampilan yang memukau, dan dukungan yang luar biasa dari teman-teman. Malam di mana bakat-bakat terpendam akhirnya bisa bersinar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Add Contact Form Section -->
+        <div id="kontak" class="tab-content">
+          <h2 class="section-title">Hubungi Kami</h2>
+          <p class="description">
+            Kirim pesan kepada kami untuk informasi lebih lanjut atau pertanyaan.
+          </p>
+          
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Nama</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Kirim Pesan</button>
+          </form>
+        </div>
+        
+        <!-- Add Photo Gallery Section -->
+        <div class="gallery-grid">
+          <a href="images/gallery1.jpg" data-lightbox="gallery" class="gallery-item">
+            <img src="images/gallery1.jpg" alt="Galeri 1" loading="lazy">
+          </a>
+          <a href="images/gallery2.jpg" data-lightbox="gallery" class="gallery-item">
+            <img src="images/gallery2.jpg" alt="Galeri 2" loading="lazy">
+          </a>
+          <a href="images/gallery3.jpg" data-lightbox="gallery" class="gallery-item">
+            <img src="images/gallery3.jpg" alt="Galeri 3" loading="lazy">
+          </a>
+          <!-- Add more gallery items as needed -->
+        </div>
+      </main>
+    </div>
+    
+    <!-- Add Counter Section before footer -->
+    <section class="counter-section">
+      <div class="container">
+        <div class="counter-grid">
+          <div class="counter-item">
+            <div class="counter-number" data-target="36">0</div>
+            <div class="counter-label">Siswa</div>
+          </div>
+          <div class="counter-item">
+            <div class="counter-number" data-target="50">0</div>
+            <div class="counter-label">Guru</div>
+          </div>
+          <div class="counter-item">
+            <div class="counter-number" data-target="10000">0</div>
+            <div class="counter-label">Prestasi</div>
+          </div>
+          <div class="counter-item">
+            <div class="counter-number" data-target="3">0</div>
+            <div class="counter-label">Tahun</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <div class="container">
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="footer-text">© 2025 NEXTERA - IX J Angkatan 2022. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Tab functionality
+      const buttons = document.querySelectorAll('.tab-btn');
+      const contents = document.querySelectorAll('.tab-content');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons and contents
+          buttons.forEach(btn => btn.classList.remove('active'));
+          contents.forEach(content => content.classList.remove('active'));
+
+          // Add active class to clicked button
+          button.classList.add('active');
+
+          // Show corresponding content
+          const tabId = button.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+      
+      // Loading Animation
+      window.addEventListener('load', () => {
+        const loader = document.querySelector('.loader-wrapper');
+        loader.style.opacity = '0';
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 500);
+      });
+      
+      // Scroll to Top Button
+      const scrollTop = document.querySelector('.scroll-top');
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          scrollTop.classList.add('visible');
+        } else {
+          scrollTop.classList.remove('visible');
+        }
+      });
+      
+      scrollTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Particles.js Configuration
+      particlesJS('particles-js', {
+        particles: {
+          number: {
+            value: 50,
+            density: {
+              enable: true,
+              value_area: 1000
+            }
+          },
+          color: {
+            value: '#a855f7'
+          },
+          shape: {
+            type: 'circle'
+          },
+          opacity: {
+            value: 0.3,
+            random: true
+          },
+          size: {
+            value: 2,
+            random: true
+          },
+          line_linked: {
+            enable: true,
+            distance: 200,
+            color: '#a855f7',
+            opacity: 0.2,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: 'none',
+            random: true,
+            straight: false,
+            out_mode: 'out',
+            bounce: false
+          }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: {
+              enable: true,
+              mode: 'grab'
+            },
+            onclick: {
+              enable: true,
+              mode: 'push'
+            },
+            resize: true
+          },
+          modes: {
+            grab: {
+              distance: 200,
+              line_linked: {
+                opacity: 0.3
+              }
+            },
+            push: {
+              particles_nb: 2
+            }
+          }
+        },
+        retina_detect: true
+      });
+      
+      // Enhanced Counter Animation
+      const counters = document.querySelectorAll('.counter-number');
+      let isAnimating = false;
+      
+      const animateCounter = (counter, target, duration = 1000) => {
+        let start = 0;
+        const increment = target / (duration / 16);
+        
+        const updateCount = () => {
+          if (start < target) {
+            start += increment;
+            counter.innerText = Math.ceil(start);
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        
+        updateCount();
+      };
+      
+      const resetCounter = (counter) => {
+        counter.innerText = '0';
+      };
+      
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        
+        // Initial animation
+        animateCounter(counter, target);
+        
+        // Hover effect
+        counter.parentElement.addEventListener('mouseenter', () => {
+          if (!isAnimating) {
+            isAnimating = true;
+            resetCounter(counter);
+            setTimeout(() => {
+              animateCounter(counter, target);
+              isAnimating = false;
+            }, 100);
+          }
+        });
+      });
+      
+      // Intersection Observer for initial animation
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = +counter.getAttribute('data-target');
+            animateCounter(counter, target);
+            observer.unobserve(counter);
+          }
+        });
+      }, { threshold: 0.5 });
+      
+      counters.forEach(counter => observer.observe(counter));
+      
+      // Parallax Effect
+      window.addEventListener('scroll', () => {
+        const parallaxElements = document.querySelectorAll('.parallax-section');
+        parallaxElements.forEach(element => {
+          const speed = element.dataset.speed || 0.5;
+          const yPos = -(window.pageYOffset * speed);
+          element.style.transform = `translateY(${yPos}px)`;
+        });
+      });
+      
+      // Remove floating animation from cards
+      document.querySelectorAll('.card, .teacher-card, .memory-card').forEach(element => {
+        element.classList.remove('floating');
+      });
+      
+      // Add subtle hover effect to cards
+      document.querySelectorAll('.card, .teacher-card, .memory-card').forEach(element => {
+        element.addEventListener('mouseenter', () => {
+          element.style.transform = 'translateY(-5px)';
+          element.style.transition = 'transform 0.3s ease';
+        });
+        
+        element.addEventListener('mouseleave', () => {
+          element.style.transform = 'translateY(0)';
+        });
+      });
+      
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        mobileMenuBtn.innerHTML = mobileMenu.classList.contains('active') 
+          ? '<i class="fas fa-times"></i>' 
+          : '<i class="fas fa-bars"></i>';
+      });
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          mobileMenu.classList.remove('active');
+          mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      });
+      
+      // Contact Form Handling
+      const contactForm = document.getElementById('contactForm');
+      
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData);
+        
+        // Here you would typically send the data to a server
+        console.log('Form submitted:', data);
+        
+        // Show success message
+        alert('Pesan berhasil dikirim!');
+        contactForm.reset();
+      });
+      
+      // Lightbox Configuration
+      lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'albumLabel': 'Gambar %1 dari %2'
+      });
+    });
+  </script>
+</body>
+</html>
