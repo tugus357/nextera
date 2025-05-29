@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function() {
           animation: bigLove 2s ease-out forwards;
           z-index: 9999;
         `;
-        loveEffect.innerHTML = '❤️';
+        loveEffect.innerHTML = '🕷️';
         
         document.body.appendChild(loveEffect);
         
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
             animation: floatHeart ${1 + Math.random()}s ease-out forwards;
             z-index: 9998;
           `;
-          floatingHeart.innerHTML = '❤️';
+          floatingHeart.innerHTML = '🕸️';
           
           // Random position
           floatingHeart.style.left = `${Math.random() * 100}vw`;
