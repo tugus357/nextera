@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
         animation: floatHeart 1s ease-out forwards;
         z-index: 1000;
       `;
-      heart.innerHTML = '💘❤️💘';
+      heart.innerHTML = '🕷️🕸️🕷️';
       
       // Random position around the card
       const rect = intanCard.getBoundingClientRect();
