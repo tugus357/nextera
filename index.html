@@ -415,8 +415,21 @@
       left: 50%;
       transform: translateX(-50%);
       width: 4px;
-      height: 100%;
-      background: linear-gradient(to bottom, transparent, var(--primary), transparent);
+      height: 0;
+      background: var(--primary);
+      border-radius: 2px;
+      animation: growLine 8s ease-in-out forwards; /* Increased from 4s to 8s */
+    }
+
+    @keyframes growLine {
+      0% {
+        height: 0;
+        box-shadow: 0 0 10px var(--primary);
+      }
+      100% {
+        height: 100%;
+        box-shadow: 0 0 20px var(--primary);
+      }
     }
     
     .timeline-item {
@@ -424,16 +437,42 @@
       margin-bottom: 3rem;
       width: 50%;
       padding: 0 2rem;
+      opacity: 0;
+      transform: translateY(20px);
     }
-    
+
     .timeline-item:nth-child(odd) {
       left: 0;
       text-align: right;
+      animation: revealLeft 1.5s ease forwards; /* Increased from 0.5s to 1.5s */
     }
-    
+
     .timeline-item:nth-child(even) {
       left: 50%;
       text-align: left;
+      animation: revealRight 1.5s ease forwards; /* Increased from 0.5s to 1.5s */
+    }
+
+    @keyframes revealLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes revealRight {
+      0% {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
     
     .timeline-item::before {
@@ -445,6 +484,19 @@
       background-color: var(--primary);
       border-radius: 50%;
       box-shadow: 0 0 10px var(--primary);
+      opacity: 0;
+      animation: revealDot 1.5s ease forwards; /* Increased from 0.5s to 1.5s */
+    }
+
+    @keyframes revealDot {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
     
     .timeline-item:nth-child(odd)::before {
@@ -460,6 +512,19 @@
       color: var(--secondary);
       font-weight: 600;
       margin-bottom: 0.5rem;
+      opacity: 0;
+      animation: revealDate 1.5s ease forwards; /* Increased from 0.5s to 1.5s */
+    }
+
+    @keyframes revealDate {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     
     .timeline-title {
@@ -467,6 +532,19 @@
       font-weight: 700;
       margin-bottom: 0.5rem;
       color: var(--light);
+      opacity: 0;
+      animation: revealTitle 1.5s ease forwards; /* Increased from 0.5s to 1.5s */
+    }
+
+    @keyframes revealTitle {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     
     .timeline-content {
@@ -474,7 +552,41 @@
       border-radius: 15px;
       padding: 1.5rem;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      animation: revealContent 1.5s ease forwards; /* Increased from 0.5s to 1.5s */
     }
+
+    @keyframes revealContent {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Animation delays for progressive reveal - increased delays */
+    .timeline-item:nth-child(1) { animation-delay: 1s; }
+    .timeline-item:nth-child(1) .timeline-date { animation-delay: 1.5s; }
+    .timeline-item:nth-child(1) .timeline-title { animation-delay: 2s; }
+    .timeline-item:nth-child(1) .timeline-content { animation-delay: 2.5s; }
+
+    .timeline-item:nth-child(2) { animation-delay: 3s; }
+    .timeline-item:nth-child(2) .timeline-date { animation-delay: 3.5s; }
+    .timeline-item:nth-child(2) .timeline-title { animation-delay: 4s; }
+    .timeline-item:nth-child(2) .timeline-content { animation-delay: 4.5s; }
+
+    .timeline-item:nth-child(3) { animation-delay: 5s; }
+    .timeline-item:nth-child(3) .timeline-date { animation-delay: 5.5s; }
+    .timeline-item:nth-child(3) .timeline-title { animation-delay: 6s; }
+    .timeline-item:nth-child(3) .timeline-content { animation-delay: 6.5s; }
+
+    .timeline-item:nth-child(4) { animation-delay: 7s; }
+    .timeline-item:nth-child(4) .timeline-date { animation-delay: 7.5s; }
+    .timeline-item:nth-child(4) .timeline-title { animation-delay: 8s; }
+    .timeline-item:nth-child(4) .timeline-content { animation-delay: 8.5s; }
     
     @media (max-width: 768px) {
       .timeline {
@@ -1061,39 +1173,92 @@
     
     /* Animated Counter */
     .counter-section {
-      padding: 4rem 0;
+      padding: 3rem 0;
       background: linear-gradient(135deg, var(--dark-light), var(--dark));
     }
     
     .counter-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
       text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
     }
     
     .counter-item {
-      padding: 2rem;
+      padding: 1.5rem;
       background: rgba(255, 255, 255, 0.05);
       border-radius: 15px;
       backdrop-filter: blur(10px);
       transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     
     .counter-item:hover {
-      transform: translateY(-10px);
+      transform: translateY(-5px);
     }
     
     .counter-number {
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
+      line-height: 1;
     }
     
     .counter-label {
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: var(--light);
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .counter-section {
+        padding: 2rem 0;
+      }
+
+      .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 0.5rem;
+      }
+
+      .counter-item {
+        padding: 1rem;
+      }
+
+      .counter-number {
+        font-size: 2rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .counter-label {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+      }
+
+      .counter-item {
+        padding: 0.75rem;
+      }
+
+      .counter-number {
+        font-size: 1.75rem;
+      }
+
+      .counter-label {
+        font-size: 0.8rem;
+      }
     }
     
     /* Floating Elements */
@@ -2209,11 +2374,16 @@
       <main class="main-content">
         <div id="profil" class="tab-content active">
           <h2 class="section-title">Tentang IX J</h2>
-          <p class="description">
-            Kami adalah keluarga kecil yang dipenuhi dengan cerita, tawa, dan kenangan indah. 
-            Angkatan 2022, kelas IX J menorehkan jejak dengan semangat dan solidaritas yang luar biasa, 
-            menciptakan ikatan persaudaraan yang tak akan pernah pudar oleh waktu.
-          </p>
+          <div style="position: relative; max-width: 800px; margin: 2rem auto;">
+            <img src="assets/69.jpg" alt="IX J Class Photo" style="width: 100%; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); border-radius: 0 0 15px 15px;">
+              <p class="description" style="color: white; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Kami adalah keluarga kecil yang dipenuhi dengan cerita, tawa, dan kenangan indah. 
+                Angkatan 2022, kelas IX J menorehkan jejak dengan semangat dan solidaritas yang luar biasa, 
+                menciptakan ikatan persaudaraan yang tak akan pernah pudar oleh waktu.
+              </p>
+            </div>
+          </div>
           
           <!-- Add Student Profiles Section -->
           <h2 class="section-title">Profil Siswa</h2>
