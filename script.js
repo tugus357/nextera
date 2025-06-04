@@ -143,16 +143,21 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 200);
     });
 
-    // Add loading animation for images
-    const avatar = card.querySelector('.student-avatar img');
-    if (avatar) {
-      avatar.style.opacity = '0';
-      avatar.style.transition = 'opacity 0.3s ease';
-      
-      avatar.onload = () => {
-        avatar.style.opacity = '1';
-      };
-    }
+   const avatar = card.querySelector('.student-avatar img');
+if (avatar) {
+  avatar.style.opacity = '0';
+  avatar.style.transition = 'opacity 0.3s ease';
+
+  // Cek apakah gambar udah ke-load duluan
+  if (avatar.complete) {
+    avatar.style.opacity = '1';
+  } else {
+    avatar.onload = () => {
+      avatar.style.opacity = '1';
+    };
+  }
+}
+
   });
 
   // Easter Egg for Intan's card
