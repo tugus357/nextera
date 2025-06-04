@@ -544,4 +544,53 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initial load of comments
   loadComments();
+
+  // Image Loading Optimization
+  function optimizeImages() {
+    const images = document.querySelectorAll('img');
+    
+    // Add loading="lazy" to all images
+    images.forEach(img => {
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+      
+      // Add error handling
+      img.onerror = function() {
+        this.src = 'assets/placeholder.png'; // Fallback image
+        this.classList.add('error');
+      };
+      
+      // Add loading animation
+      if (img.classList.contains('student-avatar')) {
+        img.onload = function() {
+          this.classList.add('loaded');
+        };
+      }
+    });
+  }
+
+  // Performance Optimization
+  function optimizePerformance() {
+    // Debounce scroll events
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+      if (scrollTimeout) {
+        window.cancelAnimationFrame(scrollTimeout);
+      }
+      scrollTimeout = window.requestAnimationFrame(function() {
+        // Your scroll handling code here
+      });
+    });
+    
+    // Optimize animations
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (prefersReducedMotion.matches) {
+      document.body.classList.add('reduced-motion');
+    }
+  }
+
+  // Initialize optimizations
+  optimizeImages();
+  optimizePerformance();
 }); 
