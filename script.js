@@ -599,3 +599,114 @@ if (avatar) {
   optimizeImages();
   optimizePerformance();
 }); 
+// TARUH INI DI FILE script.js LU
+
+// Show popup when page loads
+window.addEventListener('load', function() {
+    // Tunggu 1 detik setelah page load baru muncul popup
+    setTimeout(function() {
+        showMusicPopup();
+    }, 1000);
+});
+
+// Function to show popup
+function showMusicPopup() {
+    const popup = document.getElementById('musicPopup');
+    if (popup) {
+        popup.classList.add('show');
+        // Prevent body scroll when popup is open
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+// Function to hide popup
+function hideMusicPopup() {
+    const popup = document.getElementById('musicPopup');
+    if (popup) {
+        popup.classList.remove('show');
+        // Restore body scroll
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Event listeners for buttons
+document.addEventListener('DOMContentLoaded', function() {
+    const acceptBtn = document.getElementById('acceptBtn');
+    const declineBtn = document.getElementById('declineBtn');
+    const popup = document.getElementById('musicPopup');
+
+    // Accept button - play music and close popup
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', function() {
+            console.log('User accepted - playing music');
+            
+            // Di sini lu bisa tambahin code untuk play music
+            // Contoh:
+             playBackgroundMusic();
+            
+            // Close popup
+            hideMusicPopup();
+            
+            // Optional: Save user preference
+            localStorage.setItem('musicAccepted', 'true');
+        });
+    }
+
+    // Decline button - just close popup
+    if (declineBtn) {
+        declineBtn.addEventListener('click', function() {
+            console.log('User declined');
+            
+            // Close popup
+            hideMusicPopup();
+            
+            // Optional: Save user preference
+            localStorage.setItem('musicAccepted', 'false');
+        });
+    }
+
+    // Close popup when clicking outside
+    if (popup) {
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) {
+                hideMusicPopup();
+            }
+        });
+    }
+
+    // Close popup with ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            hideMusicPopup();
+        }
+    });
+});
+
+// Optional: Function to play background music
+function playBackgroundMusic() {
+    // Contoh implementasi audio
+    const audio = new Audio('assets/epic.mp3');
+    audio.loop = true;
+    audio.volume = 0.5; // 
+    
+    // Play music
+    audio.play().catch(function(error) {
+        console.log('Audio play failed:', error);
+    });
+}
+
+// Check if user already made a choice (optional)
+function checkUserPreference() {
+    const musicAccepted = localStorage.getItem('musicAccepted');
+    
+    if (musicAccepted === 'true') {
+        // User previously accepted, auto play music
+        const audio = new Audio('assets/epic.mp3');
+        return false; // Don't show popup
+    } else if (musicAccepted === 'false') {
+        // User previously declined
+        return false; // Don't show popup
+    }
+    
+    return true; // Show popup
+}
